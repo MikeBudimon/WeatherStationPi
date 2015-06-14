@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="index.css"/>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<title>WeatherStation Pi</title>
+
+</head>
+<body>
+
+
+<div id="wrapper">
+	<h1>WeatherStation Pi</h1>
+</div>
+
+<div id= "right_header">
+	<p id="curTemp"></p>
+	<p id="curHum"></p>
+</div>
+
+<div id="container"></div>
+
+<div id="container2"></div>
+
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+
+	var temperature = [];
+	var outsideTemp = [];
+    var humidity = [];
+    var outsideHum = [];
+    var cputemp = [];
+	var myDateFormat = "%H:%M";
+
+
+    $.getJSON("sensordata.json", function(data) {
+
+    	$.each(data, function(i, value){
+
+    		// to unix-timestamp
+    		
+    		temperature[i] = [new Date(value.Timestamp.replace(' ', 'T')+ 'Z').getTime(), parseFloat(value.Temperature)];
+    		outsideTemp[i] = [new Date(value.Timestamp.replace(' ', 'T')+ 'Z').getTime(), parseFloat(value.OutsideTemp)]; 
+    		humidity[i] = [new Date(value.Timestamp.replace(' ', 'T')+ 'Z').getTime(), parseFloat(value.Humidity)];
+    		outsideHum[i] = [new Date(value.Timestamp.replace(' ', 'T')+ 'Z').getTime(), parseFloat(value.OutsideHum)];
+    		cputemp[i] = [new Date(value.Timestamp.replace(' ', 'T')+ 'Z').getTime(), parseFloat(value.CPUTemp)];
+    		
+    	});
+
+    console.log(temperature[temperature.length-1][0]);
+    console.log(temperature[temperature.length-1][1]);
+
+	document.getElementById("curTemp").innerHTML = "<b>Current Temperature:&emsp;</b>Room = <b>" + temperature[temperature.length-1][1] + " °C</b>&emsp;Outside = <b>"+ outsideTemp[outsideTemp.length-1][1] +" °C</b>";
+	document.getElementById("curHum").innerHTML = "<b>Current Humidity:&emsp;</b>Room = <b>" + humidity[humidity.length-1][1] + " %</b>&emsp;Outside = <b>"+ outsideHum[outsideHum.length-1][1] +" %</b>";
+
+	
+    	var options1 = {
+        chart: {
+            renderTo: "container",
+            zoomType: "x",
+        },
+
+        title: {
+        	text: "Temperature in the past 24 hours"
+        },
+
+        yAxis: {
+        	title:{
+        		text: "Temperature ( °C )"
+        	},
+        },
+        tooltip: {
+            valueSuffix: ' °C'
+            },
+        xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+                millisecond: myDateFormat,
+                second: myDateFormat,
+                minute: myDateFormat,
+                hour: myDateFormat,
+                day: myDateFormat,
+                week: myDateFormat,
+                month: myDateFormat,
+                year: myDateFormat
+            },
+        	min: temperature[temperature.length-1][0] - 24*3600*1000,
+        	max: temperature[temperature.length-1][0]
+        },
+
+        series: []
+    	};
+
+
+        var options2 = {
+        chart: {
+            renderTo: "container2",
+            zoomType: "x",
+        },
+        title: {
+        	text: "Humidity in the past 24 hours"
+        },
+        yAxis: {
+        	title:{
+        		text: "Humidity ( % )"
+        	}
+        },
+        tooltip: {
+            valueSuffix: ' %'
+            },
+        xAxis: {
+            type: "datetime",
+            dateTimeLabelFormats: {
+                millisecond: myDateFormat,
+                second: myDateFormat,
+                minute: myDateFormat,
+                hour: myDateFormat,
+                day: myDateFormat,
+                week: myDateFormat,
+                month: myDateFormat,
+                year: myDateFormat
+            },
+            min: humidity[humidity.length-1][0] - 24*3600*1000,
+        	max: humidity[humidity.length-1][0]
+        	},
+
+        series: []
+    	};
+
+
+        var chart1 = new Highcharts.Chart(options1);
+
+        chart1.addSeries({
+        	name: "Room",
+        	data: temperature,
+            pointInterval: 600 * 1000 // every 10 minute
+        }, false);
+
+        chart1.addSeries({
+        	name: "Raspberry Pi",
+        	data: cputemp,
+            pointInterval: 600 * 1000
+        }, false);
+
+        chart1.addSeries({
+        	name: "Outside",
+        	data: outsideTemp,
+        	pointInterval: 600 * 1000
+        }, false);
+
+        chart1.redraw();
+
+
+        var chart2 = new Highcharts.Chart(options2);
+	
+        chart2.addSeries({
+        	name: "Room",
+        	data: humidity,
+            pointInterval: 600 * 1000
+        }, false);
+
+        chart2.addSeries({
+        	name: "Outside",
+        	data: outsideHum,
+        	pointInterval: 600 * 1000
+        }, false);
+
+        chart2.redraw();
+    });
+
+
+});
+
+
+
+
+</script>
+
+</body>
+</html>
