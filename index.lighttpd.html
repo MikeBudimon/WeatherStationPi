@@ -4,8 +4,11 @@
 
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="index.css"/>
-<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width", initial-scale=1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 
 	<title>WeatherStation Pi</title>
@@ -13,23 +16,73 @@
 </head>
 <body>
 
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			
+			<!-- Logo -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toogle="collapse" data-target="#mainNavBar">
+					<span class"icon-bar"></span>
+					<span class"icon-bar"></span>
+					<span class"icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">WeatherStation Pi</a>
+			</div>
 
-<div id="wrapper">
-	<h1>WeatherStation Pi</h1>
-</div>
+					<!-- Menu Items -->
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="">Home</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</div>	
+		</div>
+	</nav>
 
-<div id= "right_header">
-	<p id="curTemp"></p>
-	<p id="curHum"></p>
-</div>
+<div class="container">
+	<div class="page-header">
+		<h1>Home Temperatures</h1>
+	</div>
 
-<div id="container"></div>
+	<div class="panel panel-default" id= "curData">
+		<p id="curTemp"></p>
+		<p id="curHum"></p>
+	</div>
 
+	 <div class="btn-group btn-group-justified">
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-warning">T: last 24h</button>
+  		</div>
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-warning">T: last Week</button>
+  		</div>
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-warning">T: last Month</button>
+  		</div>
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-warning">T: last Year</button>
+  		</div>
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-info">H: last 24h</button>
+  		</div>
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-info">H: last Week</button>
+  		</div>
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-info">H: last Month</button>
+  		</div>
+  		<div class="btn-group">
+    		<button type="button" class="btn btn-info">H: last Year</button>
+  		</div>
+	</div>
+
+<div id="container1"></div>
 <div id="container2"></div>
 
+
+
 <script type="text/javascript">
-
-
 $(document).ready(function() {
 
 	var temperature = [];
@@ -37,7 +90,7 @@ $(document).ready(function() {
     var humidity = [];
     var outsideHum = [];
     var cputemp = [];
-	var myDateFormat = "%H:%M";
+	var myDateFormat = "%H:%M %d.%m.%Y";
 
 
     $.getJSON("sensordata.json", function(data) {
@@ -63,13 +116,16 @@ $(document).ready(function() {
 	
     	var options1 = {
         chart: {
-            renderTo: "container",
+            renderTo: "container1",
             zoomType: "x",
         },
 
         title: {
         	text: "Temperature in the past 24 hours"
         },
+        subtitle: {
+    		text: "Click and drag in the plot area to zoom in"
+		},
 
         yAxis: {
         	title:{
@@ -175,13 +231,17 @@ $(document).ready(function() {
         chart2.redraw();
     });
 
-
 });
 
-
-
-
 </script>
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+	<div class="container">
+		<p class="navbar-text">Site built by Michal Wagner</p>
+	</div>
+</nav>
 
 </body>
 </html>

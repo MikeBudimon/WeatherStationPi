@@ -20,7 +20,7 @@ if($response){
 			$sensordata[] = $row;
 	}
 
-	// delete empthy data
+	// delete first empthy data
 	array_shift($sensordata);
 
 //echo json_encode($sensordata);

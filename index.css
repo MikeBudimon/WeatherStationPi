@@ -1,12 +1,13 @@
 body {
-  background: -webkit-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); /* W3C */
+  background: -webkit-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); 
+  background:    -moz-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%); 
+  background:     -ms-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+  background:      -o-linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
+  background:         linear-gradient(90deg, #ED4264 10%, #FFEDBC 90%);
 }
 
-html, body{
+
+html, body, .container{
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -15,22 +16,30 @@ h1{
 	font-size: 250%;
 }
 
-#right_header{
+.container{
+	background-color: white;
+}
+
+.panel{
+	width: 50%;
+	margin: 0 auto;
+}
+
+#curData{
 	display: block;
 	text-align: center;
 	margin-bottom: 2em;
-
+	font-size: 125%;
 }
 
-#wrapper{
-	width: 100%;
-	height: 4em;
+.btn-group{
+	margin-top: 3em;
 }
 
-#container{
+#container1{
 	width: 100%;
-	height: 25em;
-	margin-bottom: 3em;
+	height: 40em;
+	margin-top: 1em;
 }
 
 #container2{
