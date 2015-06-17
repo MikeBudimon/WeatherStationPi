@@ -7,7 +7,7 @@ body {
 }
 
 
-html, body, .container{
+html, body, #containerBody, .navbar{
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -16,13 +16,18 @@ h1{
 	font-size: 250%;
 }
 
-.container{
+.navbar-inverse{
+	padding-left: 25em;
+}
+
+#containerBody{
 	background-color: white;
 }
 
 .panel{
 	width: 50%;
 	margin: 0 auto;
+	padding-top: 0.5em;
 }
 
 #curData{
@@ -39,10 +44,19 @@ h1{
 #container1{
 	width: 100%;
 	height: 40em;
-	margin-top: 1em;
 }
 
 #container2{
 	width: 100%;
 	height: 25em;
+}
+
+.img-rounded{
+	background-color: white;
+	height: 2em;
+	font-size: 100%;
+}
+
+#navbar-bottom{
+	margin-bottom: 0;
 }
