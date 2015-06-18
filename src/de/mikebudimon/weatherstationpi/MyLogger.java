@@ -12,6 +12,10 @@ public class MyLogger {
     public final static Logger LOGGER = Logger.getLogger(MyLogger.class.getName());
     private static FileHandler mFileHandler = null;
 
+    /**
+     * activate Handler to write logs to file
+     * @throws Exception
+     */
     public static void activateHandler() throws Exception {
 
         if (mFileHandler == null){
@@ -22,9 +26,11 @@ public class MyLogger {
         }
     }
 
+    /**
+     * suppress the logging output to the console
+     */
     private static void suppressConsole(){
 
-        // suppress the logging output to the console
         Logger rootLogger = Logger.getLogger("");
         Handler[] handlers = rootLogger.getHandlers();
 

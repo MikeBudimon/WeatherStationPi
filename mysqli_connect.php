@@ -17,10 +17,10 @@ DELETE : Delete existing rows (Remove privilege if not required)
 */
 
 // Defined as constants so that they can't be changed
-DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PASSWORD', 'Thecobra1993-');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'weatherstation');
+DEFINE ('DB_USER', '');
+DEFINE ('DB_PASSWORD', '');
+DEFINE ('DB_HOST', '');
+DEFINE ('DB_NAME', '');
 
 // $dbc will contain a resource link to the database
 // @ keeps the error from showing in the browser

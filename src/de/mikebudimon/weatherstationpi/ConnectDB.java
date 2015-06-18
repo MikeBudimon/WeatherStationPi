@@ -13,11 +13,11 @@ public class ConnectDB {
 
     // JDBC driver name and database URL
     private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://localhost/weatherstation";
+    private final String DB_URL = "jdbc:mysql://"; // enter here your database URL
 
     //  Database credentials
-    private final String USER = "sqluser";
-    private final String PASS = "Thecobra1993-";
+    private final String USER = ""; // enter here your db user
+    private final String PASS = ""; // enter here your db password
 
 
     public void useDatabase() throws Exception {
@@ -31,8 +31,8 @@ public class ConnectDB {
 
     public void writeDatabase(float temperature, float humidity, float cpuTemp, float outsideTemp, float outsideHum) throws Exception {
 
-        // PreparedStatements can use variables and are more efficient
-        mPreparedStatement = mConnect.prepareStatement("insert into weatherstation.data values (null, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)");
+        // PreparedStatements can use variables and are more efficient than normal statements
+        mPreparedStatement = mConnect.prepareStatement("insert into '' values (null, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)"); // enter here your database table
 
         mPreparedStatement.setFloat(1, humidity);
         mPreparedStatement.setFloat(2, temperature);

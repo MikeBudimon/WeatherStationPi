@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 
 require_once('mysqli_connect.php');
 
-$query = "SELECT ID, Temperature, Humidity, CPUTemp, Date, Time FROM data";
+$query = "SELECT * FROM data";
 
 $response = @mysqli_query($dbc, $query);
 
@@ -28,8 +28,9 @@ if($response){
 		$xml .="\t\t<Temperature>".$row['Temperature']."</Temperature>\n";
 		$xml .="\t\t<Humidity>".$row['Humidity']."</Humidity>\n";
 		$xml .="\t\t<CPUTemp>".$row['CPUTemp']."</CPUTemp>\n";
-		$xml .="\t\t<Date>".$row['Date']."</Date>\n";
-		$xml .="\t\t<Time>".$row['Time']."</Time>\n";	
+		$xml .="\t\t<OutsideTemp>".$row['OutsideTemp']."</OutsideTemp>\n";
+		$xml .="\t\t<OutsideHum>".$row['OutsideHum']."</OutsideHum>\n";
+		$xml .="\t\t<Timestamp>".$row['Timestamp']."</Timestamp>\n";		
 
   		$xml .="\t</sensordata>\n";		
 	}

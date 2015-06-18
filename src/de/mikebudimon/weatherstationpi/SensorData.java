@@ -7,13 +7,18 @@ import se.hirt.w1.Sensors;
 import java.util.Set;
 
 /**
- * Get Data from DHT22 sensor
+ * get or print data from DHT22 sensor
  */
 public class SensorData{
 
     private Set<Sensor> sensors;
 
 
+    /**
+     * get sensordata
+     * @return temps
+     * @throws Exception
+     */
     public float[] getData() throws Exception{
 
         sensors = Sensors.getSensors();
@@ -21,13 +26,21 @@ public class SensorData{
         float temps[] = new float[3];
         int i = 0;
 
+        // first humidity, second temperature => check with printData() if not sure
         for (Sensor sensor : sensors) {
 
             float temp = (Math.round((float) sensor.getValue() * 100.0f) / 100.0f);
+            long time = System.currentTimeMillis();
 
-            // Sometimes the sensors sends false temp data as 0.00
+            // Sometimes the sensors sends false data
             while (temp == 0.00) {
                 temp = (Math.round((float) sensor.getValue() * 100.0f) / 100.0f);
+                long curTime = System.currentTimeMillis();
+
+                // if sensor sends false data for 2 minutes => end program
+                if (curTime - time > 120000){
+                    System.exit(0);
+                }
             }
             temps[i] = temp;
             i++;
@@ -38,7 +51,11 @@ public class SensorData{
         return temps;
     }
 
-    public void showData() throws Exception{
+    /**
+     * print sensordata
+     * @throws Exception
+     */
+    public void printData() throws Exception{
 
         System.out.printf("Found %d sensors! \n", sensors.size());
 

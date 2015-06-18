@@ -39,17 +39,14 @@ h1{
 
 .btn-group{
 	margin-top: 3em;
+	margin-bottom: 1em;
 }
 
-#container1{
+#containerGraph{
 	width: 100%;
-	height: 40em;
+	height: 38.5em;
 }
 
-#container2{
-	width: 100%;
-	height: 25em;
-}
 
 .img-rounded{
 	background-color: white;
