@@ -37,8 +37,8 @@ public class SensorData{
                 temp = (Math.round((float) sensor.getValue() * 100.0f) / 100.0f);
                 long curTime = System.currentTimeMillis();
 
-                // if sensor sends false data for 2 minutes => end program
-                if (curTime - time > 120000){
+                // if sensor sends false data for 8 minutes => end program
+                if (curTime - time > 480000){
                     System.exit(0);
                 }
             }
