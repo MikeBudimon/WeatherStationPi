@@ -46,6 +46,11 @@ public class SensorData{
             i++;
         }
 
+        // checks if humidity or temperature data is wrong => restart
+        if (temps[0] >= 100.0 || temps[1] >= 35.0){
+            getData();
+        }
+
         temps[i] = SystemInfo.getCpuTemperature();
 
         return temps;
