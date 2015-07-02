@@ -33,7 +33,7 @@ public class SensorData{
             long time = System.currentTimeMillis();
 
             // Sometimes the sensors sends false data
-            while (temp == 0.00) {
+            while (temp <= 0.00) {
                 temp = (Math.round((float) sensor.getValue() * 100.0f) / 100.0f);
                 long curTime = System.currentTimeMillis();
 
@@ -47,7 +47,7 @@ public class SensorData{
         }
 
         // checks if humidity or temperature data is wrong => restart
-        if (temps[0] >= 100.0 || temps[1] >= 35.0){
+        if (temps[0] >= 100.0f || temps[1] >= 35.0f){
             getData();
         }
 
