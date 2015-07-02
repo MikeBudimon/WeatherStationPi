@@ -2,7 +2,10 @@ package de.mikebudimon.weatherstationpi;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Log program events to file
@@ -16,12 +19,12 @@ public class MyLogger {
      * activate Handler to write logs to file
      * @throws Exception
      */
-    public static void activateHandler() throws Exception {
+    public static void activateFileHandler() throws Exception {
 
         if (mFileHandler == null){
             LOGGER.setLevel(Level.SEVERE);
 
-            mFileHandler = new FileHandler("/home/pi/projects/Log"+ new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".xml");
+            mFileHandler = new FileHandler("/home/pi/WeatherStationPi/logs/" + new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date()) + ".xml");
             LOGGER.addHandler(mFileHandler);
         }
     }

@@ -19,6 +19,7 @@ h1{
 
 #containerBody{
 	background-color: white;
+	box-shadow: 0.3em 0.3em 0.3em #888888;
 }
 
 .panel{

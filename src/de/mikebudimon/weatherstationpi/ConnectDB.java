@@ -1,6 +1,8 @@
 package de.mikebudimon.weatherstationpi;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 /**
  * Connect to and transfer data between MYSQL Database
@@ -11,28 +13,29 @@ public class ConnectDB {
     private Connection mConnect = null;
     private PreparedStatement mPreparedStatement = null;
 
-    // JDBC driver name and database URL
-    private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://"; // enter here your database URL
 
-    //  Database credentials
-    private final String USER = ""; // enter here your db user
-    private final String PASS = ""; // enter here your db password
-
-
+    /**
+     * load MySQL driver
+     *
+     * @throws Exception
+     */
     public void useDatabase() throws Exception {
 
         // This will load the MySQL driver, each DB has its own driver
+        String JDBC_DRIVER = "com.mysql.jdbc.Driver";
         Class.forName(JDBC_DRIVER);
 
+        String DB_URL = "jdbc:mysql://"; // enter your database
+        String USER = ""; // enter db username
+        String PASS = ""; // enter db password
         mConnect = DriverManager.getConnection(DB_URL, USER, PASS);
     }
 
 
     public void writeDatabase(float temperature, float humidity, float cpuTemp, float outsideTemp, float outsideHum) throws Exception {
 
-        // PreparedStatements can use variables and are more efficient than normal statements
-        mPreparedStatement = mConnect.prepareStatement("insert into '' values (null, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)"); // enter here your database table
+        // PreparedStatements can use variables and are more efficient than normal statements, exchange XX for your db name
+        mPreparedStatement = mConnect.prepareStatement("insert into XX values (null, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)");
 
         mPreparedStatement.setFloat(1, humidity);
         mPreparedStatement.setFloat(2, temperature);
@@ -45,12 +48,12 @@ public class ConnectDB {
 
     public void close() throws Exception {
 
-            if (mConnect != null) {
-                mConnect.close();
-            }
+        if (mConnect != null) {
+            mConnect.close();
+        }
 
-            if (mPreparedStatement != null){
-                mPreparedStatement.close();
-            }
+        if (mPreparedStatement != null) {
+            mPreparedStatement.close();
+        }
     }
 }

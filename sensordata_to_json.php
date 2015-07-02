@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 
 require_once('mysqli_connect.php');
 
-$query = "SELECT * FROM data";
+$query = "SELECT * FROM XX"; // exchange XX for your db table
 
 $response = @mysqli_query($dbc, $query);
    
@@ -26,7 +26,7 @@ if($response){
 //echo json_encode($sensordata);
 
 // Write to json file
-$fp = fopen("/var/www/sensordata.json", "w");
+$fp = fopen("XX", "w"); // // exchange XX for your path
 fwrite($fp, json_encode($sensordata));
 fclose($fp);
 
