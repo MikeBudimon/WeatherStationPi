@@ -1,6 +1,3 @@
-# WeatherStationPI
-Raspberry Pi as a mini weatherstation
-
 #What is WeatherStationPI?
 WeatherStationPI is a project which obtains weather data from a sensor and OpenWeatherMap and displays it on a website.
 For hosting a website and storing data into a database a Raspberry Pi B+ is in use. Also <a href=http://www.highcharts.com/>Highcharts<a/> was used for displaying
