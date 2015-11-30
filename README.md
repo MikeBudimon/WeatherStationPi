@@ -8,7 +8,7 @@ Every 10 minutes the Raspberry Pi performs the java program to get sensordata an
 At the end a PHP script is called to save all sensordata in the database into a json file. Then the json data can be loaded
 from a javascript file into highcharts as a series and displayed on a website. The website was made by using <a href=http://getbootstrap.com/>Bootstrap<a/>.
 The java program but also the PHP-script which saves sensordata into json and all files for displaying the result in a
-website are all included.
+website are included.
 
 
 #License
