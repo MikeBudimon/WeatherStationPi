@@ -6,27 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c14d3e6-09c3-432e-9530-99ea1d1eabde" name="Default" comment=" - optimized and updated code for better functionality.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getSensordata.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/OWMData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weatherstationpi.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weatherstationpi.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.lighttpd.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/w1.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/WeatherStationPI_jar/WeatherStationPI.jar" afterPath="$PROJECT_DIR$/out/artifacts/WeatherStationPI_jar/WeatherStationPI.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/ConnectDB.class" afterPath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/ConnectDB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/Main.class" afterPath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/MyLogger.class" afterPath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/MyLogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/SensorData.class" afterPath="$PROJECT_DIR$/out/production/WeatherStationPI/de/mikebudimon/weatherstationpi/SensorData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_5_1_35.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_5_1_35.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/net_aksingh_owm_japis_2_5_0_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/net_aksingh_owm_japis_2_5_0_3.xml" />
+    <list default="true" id="3c14d3e6-09c3-432e-9530-99ea1d1eabde" name="Default" comment=" - optimized and updated code for better functionality. &#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sensordata_to_json.php" afterPath="$PROJECT_DIR$/sensordata_to_json.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/ConnectDB.java" afterPath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/ConnectDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java" afterPath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/MyLogger.java" afterPath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/MyLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/SensorData.java" afterPath="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/SensorData.java" />
     </list>
     <ignored path="WeatherStationPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,21 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="weatherstationpi.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/weatherstationpi.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18863362">
-              <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.59611994">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/SensorData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+              <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -121,6 +92,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Michal Wagner &lt;mikebudimon@gmail.com&gt;" />
         <option value="Michal Wagner" />
       </list>
     </option>
@@ -140,10 +112,10 @@
         <option value="$PROJECT_DIR$/wwqqw.html" />
         <option value="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/MyLogger.java" />
         <option value="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/SensorData.java" />
-        <option value="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java" />
         <option value="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/ConnectDB.java" />
         <option value="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/OWMData.java" />
         <option value="$PROJECT_DIR$/weatherstationpi.html" />
+        <option value="$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java" />
       </list>
     </option>
   </component>
@@ -465,6 +437,19 @@
       <option name="number" value="Default" />
       <updated>1433529662627</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fix for wrong sensordata&#10;">
+      <created>1452219502465</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1452219502465</updated>
+    </task>
+    <task id="LOCAL-00002" summary=" - optimized and updated code for better functionality. &#10;">
+      <created>1452219703927</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1452219703927</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -477,7 +462,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15811966" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -511,7 +496,9 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value=" - optimized and updated code for better functionality." />
-    <option name="LAST_COMMIT_MESSAGE" value=" - optimized and updated code for better functionality." />
+    <MESSAGE value="Fix for wrong sensordata&#10;" />
+    <MESSAGE value=" - optimized and updated code for better functionality. &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - optimized and updated code for better functionality. &#10;" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -527,14 +514,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/MyLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -896,15 +875,7 @@
     <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/SensorData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/ConnectDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -917,18 +888,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java">
+    <entry file="file://$PROJECT_DIR$/weatherstationpi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.04887218">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weatherstationpi.html">
+    <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/ConnectDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18863362">
-          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/mikebudimon/weatherstationpi/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59611994">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
