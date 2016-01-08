@@ -15,7 +15,6 @@ public class Main {
             //System.out.println("Receiving sensordata...");
             float[] sData = sensorData.getData();
 
-
             //System.out.println("Connecting to a selected database...");
             connectDB.useDatabase();
             //System.out.println("Successfully connected to database!");
