@@ -18,8 +18,7 @@ h1{
 
 
 #containerBody{
-	background-color: white;
-	box-shadow: 0.3em 0.3em 0.3em #888888;
+	background: url(cream_dust.png) repeat 0 0;
 }
 
 .panel{
@@ -42,7 +41,7 @@ h1{
 
 #containerGraph{
 	width: 100%;
-	height: 38.5em;
+	height: 40em;
 }
 
 
@@ -54,4 +53,9 @@ h1{
 
 #navbar-bottom{
 	margin-bottom: 0;
+}
+
+#navbar{
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
