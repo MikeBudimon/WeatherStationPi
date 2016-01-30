@@ -75,10 +75,12 @@ $(document).ready(function() {
         	name: "Raspberry Pi",
         	data: cputemp,
         }, false);
+/*
         chart.addSeries({
         	name: "Outside",
         	data: outsideTemp,
         }, false);
+*/
         chart.redraw();
 
 
@@ -103,12 +105,12 @@ $(document).ready(function() {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-
+/*
             chart.addSeries({
                 name: "Outside",
                 data: outsideTemp,
             }, false);
-
+*/
             chart.series[0].update({ tooltip:{
                 valueSuffix: ' °C',}
             });
@@ -144,12 +146,12 @@ $(document).ready(function() {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-
+/*
             chart.addSeries({
                 name: "Outside",
                 data: outsideTemp,
             }, false);
-
+*/
             chart.series[0].update({ tooltip:{
                 valueSuffix: ' °C',}
             });
@@ -184,12 +186,12 @@ $(document).ready(function() {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-
+/*
             chart.addSeries({
                 name: "Outside",
                 data: outsideTemp,
             }, false);
-
+*/
             chart.series[0].update({ tooltip:{
                 valueSuffix: ' °C',}
             });
@@ -224,12 +226,12 @@ $(document).ready(function() {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-
+/*
             chart.addSeries({
                 name: "Outside",
                 data: outsideTemp,
             }, false);
-
+*/
             chart.series[0].update({ tooltip:{
                 valueSuffix: ' °C',}
             });
