@@ -1,5 +1,5 @@
 #What is WeatherStationPi?
-WeatherStationPI is a project which obtains weather data from a sensor and OpenWeatherMap and displays it on a website.
+WeatherStationPi is a project which obtains weather data from a sensor and OpenWeatherMap and displays it on a website.
 For hosting a website and storing data into a database a Raspberry Pi 2 is in use. Also <a href=http://www.highcharts.com/>Highcharts<a/> was used for displaying
 the data in a nice looking graph. A <a href=http://www.adafruit.com/products/385>DHT22<a/> sensor was used to deliver temperature and humidity data.
 
