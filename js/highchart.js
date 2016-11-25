@@ -75,12 +75,12 @@ $(document).ready(function () {
             name: "Raspberry Pi",
             data: cputemp,
         }, false);
-        /*
-                chart.addSeries({
-                    name: "Outside",
-                    data: outsideTemp,
-                }, false);
-        */
+
+        chart.addSeries({
+            name: "Outside",
+            data: outsideTemp,
+        }, false);
+
         chart.redraw();
 
 
@@ -91,10 +91,18 @@ $(document).ready(function () {
                 chart.series[0].remove(false);
             }
 
-            chart.xAxis[0].update({ min: temperature[temperature.length - 1][0] - 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: temperature[temperature.length - 1][0] });
-            chart.setTitle({ text: "Temperature in the past 24 hours" });
-            chart.yAxis[0].setTitle({ text: "Temperature ( °C )" });
+            chart.xAxis[0].update({
+                min: temperature[temperature.length - 1][0] - 24 * 3600 * 1000
+            });
+            chart.xAxis[0].update({
+                max: temperature[temperature.length - 1][0]
+            });
+            chart.setTitle({
+                text: "Temperature in the past 24 hours"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Temperature ( °C )"
+            });
 
             chart.addSeries({
                 name: "Room",
@@ -105,12 +113,12 @@ $(document).ready(function () {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-            /*
-                        chart.addSeries({
-                            name: "Outside",
-                            data: outsideTemp,
-                        }, false);
-            */
+
+            chart.addSeries({
+                name: "Outside",
+                data: outsideTemp,
+            }, false);
+
             chart.series[0].update({
                 tooltip: {
                     valueSuffix: ' °C',
@@ -138,10 +146,18 @@ $(document).ready(function () {
             }
 
 
-            chart.xAxis[0].update({ min: temperature[temperature.length - 1][0] - 7 * 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: temperature[temperature.length - 1][0] });
-            chart.setTitle({ text: "Temperature in the past week" });
-            chart.yAxis[0].setTitle({ text: "Temperature ( °C )" });
+            chart.xAxis[0].update({
+                min: temperature[temperature.length - 1][0] - 7 * 24 * 3600 * 1000
+            });
+            chart.xAxis[0].update({
+                max: temperature[temperature.length - 1][0]
+            });
+            chart.setTitle({
+                text: "Temperature in the past week"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Temperature ( °C )"
+            });
 
             chart.addSeries({
                 name: "Room",
@@ -152,12 +168,12 @@ $(document).ready(function () {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-            /*
-                        chart.addSeries({
-                            name: "Outside",
-                            data: outsideTemp,
-                        }, false);
-            */
+
+            chart.addSeries({
+                name: "Outside",
+                data: outsideTemp,
+            }, false);
+
             chart.series[0].update({
                 tooltip: {
                     valueSuffix: ' °C',
@@ -184,10 +200,18 @@ $(document).ready(function () {
                 chart.series[0].remove(false);
             }
 
-            chart.xAxis[0].update({ min: temperature[temperature.length - 1][0] - 4 * 7 * 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: temperature[temperature.length - 1][0] });
-            chart.setTitle({ text: "Temperature in the past month" });
-            chart.yAxis[0].setTitle({ text: "Temperature ( °C )" });
+            chart.xAxis[0].update({
+                min: temperature[temperature.length - 1][0] - 4 * 7 * 24 * 3600 * 1000
+            });
+            chart.xAxis[0].update({
+                max: temperature[temperature.length - 1][0]
+            });
+            chart.setTitle({
+                text: "Temperature in the past month"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Temperature ( °C )"
+            });
 
             chart.addSeries({
                 name: "Room",
@@ -198,12 +222,12 @@ $(document).ready(function () {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-            /*
-                        chart.addSeries({
-                            name: "Outside",
-                            data: outsideTemp,
-                        }, false);
-            */
+
+            chart.addSeries({
+                name: "Outside",
+                data: outsideTemp,
+            }, false);
+
             chart.series[0].update({
                 tooltip: {
                     valueSuffix: ' °C',
@@ -230,10 +254,18 @@ $(document).ready(function () {
                 chart.series[0].remove(false);
             }
 
-            chart.xAxis[0].update({ min: temperature[temperature.length - 1][0] - 12 * 4 * 7 * 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: temperature[temperature.length - 1][0] });
-            chart.setTitle({ text: "Temperature in the past year" });
-            chart.yAxis[0].setTitle({ text: "Temperature ( °C )" });
+            chart.xAxis[0].update({
+                min: temperature[temperature.length - 1][0] - 12 * 4 * 7 * 24 * 3600 * 1000
+            });
+            chart.xAxis[0].update({
+                max: temperature[temperature.length - 1][0]
+            });
+            chart.setTitle({
+                text: "Temperature in the past year"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Temperature ( °C )"
+            });
 
             chart.addSeries({
                 name: "Room",
@@ -244,12 +276,12 @@ $(document).ready(function () {
                 name: "Raspberry Pi",
                 data: cputemp,
             }, false);
-            /*
-                        chart.addSeries({
-                            name: "Outside",
-                            data: outsideTemp,
-                        }, false);
-            */
+
+            chart.addSeries({
+                name: "Outside",
+                data: outsideTemp,
+            }, false);
+
             chart.series[0].update({
                 tooltip: {
                     valueSuffix: ' °C',
@@ -275,10 +307,18 @@ $(document).ready(function () {
                 chart.series[0].remove(false);
             }
 
-            chart.xAxis[0].update({ min: humidity[humidity.length - 1][0] - 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: humidity[humidity.length - 1][0] });
-            chart.setTitle({ text: "Humidity in the past 24 hours" });
-            chart.yAxis[0].setTitle({ text: "Humidity ( % )" });
+            chart.xAxis[0].update({
+                min: humidity[humidity.length - 1][0] - 24 * 3600 * 1000
+            });
+            chart.xAxis[0].update({
+                max: humidity[humidity.length - 1][0]
+            });
+            chart.setTitle({
+                text: "Humidity in the past 24 hours"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Humidity ( % )"
+            });
 
             chart.addSeries({
                 name: "Room",
@@ -311,10 +351,18 @@ $(document).ready(function () {
                 chart.series[0].remove(false);
             }
 
-            chart.xAxis[0].update({ min: humidity[humidity.length - 1][0] - 7 * 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: humidity[humidity.length - 1][0] });
-            chart.setTitle({ text: "Humidity in the past week" });
-            chart.yAxis[0].setTitle({ text: "Humidity ( % )" });
+            chart.xAxis[0].update({
+                min: humidity[humidity.length - 1][0] - 7 * 24 * 3600 * 1000
+            });
+            chart.xAxis[0].update({
+                max: humidity[humidity.length - 1][0]
+            });
+            chart.setTitle({
+                text: "Humidity in the past week"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Humidity ( % )"
+            });
 
             chart.addSeries({
                 name: "Room",
@@ -347,10 +395,18 @@ $(document).ready(function () {
                 chart.series[0].remove(false);
             }
 
-            chart.xAxis[0].update({ min: humidity[humidity.length - 1][0] - 4 * 7 * 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: humidity[humidity.length - 1][0] });
-            chart.setTitle({ text: "Humidity in the past month" });
-            chart.yAxis[0].setTitle({ text: "Humidity ( % )" });
+            chart.xAxis[0].update({
+                min: humidity[humidity.length - 1][0] - 4 * 7 * 24 * 3600 * 1000
+            });
+            chart.xAxis[0].update({
+                max: humidity[humidity.length - 1][0]
+            });
+            chart.setTitle({
+                text: "Humidity in the past month"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Humidity ( % )"
+            });
 
             chart.addSeries({
                 name: "Room",
@@ -382,10 +438,19 @@ $(document).ready(function () {
                 chart.series[0].remove(false);
             }
 
-            chart.xAxis[0].update({ min: humidity[humidity.length - 1][0] - 12 * 4 * 7 * 24 * 3600 * 1000 });
-            chart.xAxis[0].update({ max: humidity[humidity.length - 1][0] });
-            chart.setTitle({ text: "Humidity in the past year" });
-            chart.yAxis[0].setTitle({ text: "Humidity ( % )" });
+            chart.xAxis[0].update({
+                min: humidity[humidity.length - 1][0] - 12 * 4 * 7 * 24 *
+                    3600 * 1000,
+            });
+            chart.xAxis[0].update({
+                max: humidity[humidity.length - 1][0],
+            });
+            chart.setTitle({
+                text: "Humidity in the past year"
+            });
+            chart.yAxis[0].setTitle({
+                text: "Humidity ( % )"
+            });
 
             chart.addSeries({
                 name: "Room",

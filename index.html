@@ -20,15 +20,15 @@
         <hr>
 
         <!-- show current data-->
-        <div class="card">
-            <div class="card-bock" id="curData">
+        <div class="card margin-bottom margin-top">
+            <div class="card-block text-xs-center">
                 <p class="card-text text-xs-center" id="curTemp"></p>
                 <p class="card-text text-xs-center" id="curHum"></p>
             </div>
         </div>
 
 
-        <div class="row text-md-center">
+        <div class="row text-md-center margin-bottom">
             <!-- buttons for different dateformats -->
             <div class="btn-group" role="group" aria-label="First group">
                 <button type="button" id="T-last24h" class="btn btn-warning">T: last 24h</button>
@@ -44,8 +44,14 @@
             </div>
         </div>
 
+        <hr>
         <!-- display highchart graph -->
         <div id="containerGraph"></div>
+        <hr>
+
+        <div class="container text-xs-center margin-top margin-bottom">
+            <button type="button" onclick="window.open('https://github.com/MikeBudimon/WeatherStationPi', '_self')" class="btn btn-outline-success btn-lg">View the project on GitHub!</button>
+        </div>
 
         <!-- footer -->
         <hr>
