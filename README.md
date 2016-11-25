@@ -11,6 +11,3 @@ The java program but also the PHP-script which saves sensordata into json and al
 website are included.
 
 Credits go to <a href=http://www.highcharts.com/>Highcharts<a/>, <a href=https://bitbucket.org/akapribot/owm-japis/src>OWM-JAPIS<a/> and <a href=http://getbootstrap.com/>Bootstrap<a/>.
-
-#License
-<a href=http://opensource.org/licenses/MIT>MIT License<a/>
