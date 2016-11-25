@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WeatherStation Pi</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="css/weatherstationpi.css">
+</head>
+
+<body>
+    <!-- navbar-->
+    <nav class="navbar navbar-inverse container" id="navbar">
+        <div class="container">
+
+            <!-- logo -->
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">WeatherStation Pi</a>
+            </div>
+
+            <!-- menu items -->
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="">Home</a></li>
+                <li><a href="https://github.com/MikeBudimon/WeatherStationPi">About</a></li>
+                <li><a href="https://github.com/MikeBudimon">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- mainbody -->
+    <div class="container" id="containerBody">
+        <div class="page-header">
+            <h1>Home Temperatures</h1>
+        </div>
+
+        <!-- show current data-->
+        <div class="panel panel-default" id="curData">
+            <p id="curTemp"></p>
+            <p id="curHum"></p>
+        </div>
+
+        <!-- buttons for different dateformats -->
+        <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+                <button type="button" id="T-last24h" class="btn btn-warning">T: last 24h</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" id="T-lastWeek" class="btn btn-warning">T: last Week</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" id="T-lastMonth" class="btn btn-warning">T: last Month</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" id="T-lastYear" class="btn btn-warning">T: last Year</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" id="H-last24h" class="btn btn-info">H: last 24h</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" id="H-lastWeek" class="btn btn-info">H: last Week</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" id="H-lastMonth" class="btn btn-info">H: last Month</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" id="H-lastYear" class="btn btn-info">H: last Year</button>
+            </div>
+        </div>
+
+        <!-- display highchart graph -->
+        <div id="containerGraph"></div>
+
+        <!-- footer -->
+        <footer class="navbar navbar-default" id="navbar-bottom">
+            <p class="navbar-text"><span style="padding-left: 10em">Site built by <a
+                    href="https://github.com/MikeBudimon">@Michal Wagner</a></span></p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="js/highchart.js"></script>
+</body>
+
+</html>
